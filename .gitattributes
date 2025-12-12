@@ -1,0 +1,36 @@
+# Auto detect text files and normalize line endings
+* text=auto
+
+# Source files
+*.rb        text
+*.cpp       text
+*.hpp       text
+*.h         text
+*.c         text
+
+# Config files
+*.gemspec   text
+*.yml       text
+*.json      text
+*.md        text
+
+# Shell scripts
+*.sh        text eol=lf
+
+# Windows files
+*.bat       text eol=crlf
+*.cmd       text eol=crlf
+*.vcproj    text eol=crlf
+*.vcxproj   text eol=crlf
+*.sln       text eol=crlf
+
+# Binary files
+*.bmp       binary
+*.png       binary
+*.jpg       binary
+*.gif       binary
+*.ico       binary
+*.so        binary
+*.dll       binary
+*.bundle    binary
+*.gem       binary

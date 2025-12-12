@@ -1,0 +1,71 @@
+# Bundler
+/.bundle/
+Gemfile.lock
+
+# Build artifacts
+*.gem
+*.so
+*.dll
+*.bundle
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+
+# Extension build files
+/ext/bitmap_plus_plus/Makefile
+/ext/bitmap_plus_plus/mkmf.log
+/ext/bitmap_plus_plus/*.o
+/ext/bitmap_plus_plus/*.obj
+
+# Compiled extension in lib (should be built fresh)
+/lib/*.so
+/lib/*.dll
+/lib/*.bundle
+/lib/bitmap_plus_plus/
+
+# Old ext directory files (from before restructure)
+/ext/Makefile
+/ext/mkmf.log
+/ext/*.o
+/ext/*.obj
+/ext/*.pdb
+/ext/*.ilk
+/ext/*.dll
+/ext/*.so
+/ext/out/
+
+# CMake build directories
+out/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+build.ninja
+.ninja_*
+
+# IDE files
+/.idea/
+/.vs/
+*.vcxproj.user
+nbproject/
+
+# Documentation
+/doc/
+
+# Packaging
+/pkg/
+
+# Temp files
+*.swp
+.*.swp
+tmp/
+heap.dump
+
+# Ruby version managers
+.ruby-version
+.rvmrc
+
+# Coverage reports
+coverage/

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "C:/Source/BitmapPlusPlus-ruby/ext/build/msvc-release",
+  "command": "C:\\PROGRA~1\\MICROS~3\\18\\Insiders\\VC\\Tools\\MSVC\\1450~1.357\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP -DBitmapPlusPlus_EXPORTS -IC:\\msys64\\usr\\local\\ruby-3.4.3-mswin\\include\\ruby-3.4.0 -IC:\\msys64\\usr\\local\\ruby-3.4.3-mswin\\include\\ruby-3.4.0\\x64-mswin64_140 -IC:\\Source\\BitmapPlusPlus-ruby\\ext\\..\\..\\rice -IC:\\Source\\BitmapPlusPlus-ruby\\ext\\. /EHs /W4 /bigobj /utf-8 /O2 /DNDEBUG /D_CRT_SECURE_NO_DEPRECATE /D_CRT_NONSTDC_NO_DEPRECATE /O2 /Ob2 /DNDEBUG -std:c++17 -MD -Zi /FoCMakeFiles\\BitmapPlusPlus.dir\\BitmapPlusPlus-rb.cpp.obj /FdCMakeFiles\\BitmapPlusPlus.dir\\ /FS -c C:\\Source\\BitmapPlusPlus-ruby\\ext\\BitmapPlusPlus-rb.cpp",
+  "file": "C:/Source/BitmapPlusPlus-ruby/ext/BitmapPlusPlus-rb.cpp",
+  "output": "C:/Source/BitmapPlusPlus-ruby/ext/build/msvc-release/CMakeFiles/BitmapPlusPlus.dir/BitmapPlusPlus-rb.cpp.obj"
+}
+]
