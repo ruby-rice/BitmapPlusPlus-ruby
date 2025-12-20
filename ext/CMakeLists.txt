@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Setup ruby extension
 project(BitmapPlusPlus LANGUAGES CXX)
-add_library (${CMAKE_PROJECT_NAME} SHARED)
+add_library (${CMAKE_PROJECT_NAME} MODULE)
 
 # Link to Rice git repo
 include(FetchContent)
