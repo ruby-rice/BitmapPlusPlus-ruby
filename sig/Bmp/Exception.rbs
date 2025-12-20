@@ -1,5 +1,5 @@
 module Bmp
   class Exception
-    def initialize: (message: String) -> void
+    def initialize: (message: String) -> NilClass
   end
 end

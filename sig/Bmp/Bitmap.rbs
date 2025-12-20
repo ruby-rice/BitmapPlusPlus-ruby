@@ -1,39 +1,39 @@
 module Bmp
   class Bitmap
-    def initialize: () -> void
-               | (filename: String) -> void
-               | (width: Integer, height: Integer) -> void
-    def !: () -> bool
-    def !=: (image: Bitmap) -> bool
-    def ==: (image: Bitmap) -> bool
-    def []: (i: Integer) -> Pixel
-       | (i: Integer) -> Pixel
-    def []=: (arg_0: Integer, arg_1: Pixel) -> void
-    def assign: (image: Bitmap) -> Bitmap
-           | (image: Bitmap) -> Bitmap
-    def cbegin: () -> VectorConstIterator≺VectorVal≺SimpleTypes≺bmp꞉꞉Pixel≻≻≻
-    def cend: () -> VectorConstIterator≺VectorVal≺SimpleTypes≺bmp꞉꞉Pixel≻≻≻
-    def clear: (pixel: Pixel) -> void
-    def crbegin: () -> ReverseIterator≺VectorConstIterator≺VectorVal≺SimpleTypes≺bmp꞉꞉Pixel≻≻≻≻
-    def crend: () -> ReverseIterator≺VectorConstIterator≺VectorVal≺SimpleTypes≺bmp꞉꞉Pixel≻≻≻≻
-    def draw_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Pixel) -> void
-    def draw_line: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, color: Pixel) -> void
-    def draw_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Pixel) -> void
-    def draw_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Pixel) -> void
-    def fill_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Pixel) -> void
-    def fill_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Pixel) -> void
-    def fill_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Pixel) -> void
-    def flip_h: () -> Bitmap
-    def flip_v: () -> Bitmap
-    def get: (x: Integer, y: Integer) -> Pixel
-        | (x: Integer, y: Integer) -> Pixel
+    def !: () -> TrueClass
+    def !=: (image: Bmp::Bitmap) -> TrueClass
+    def ==: (image: Bmp::Bitmap) -> TrueClass
+    def []: (i: Integer) -> Bmp::Pixel
+       | (i: Integer) -> Bmp::Pixel
+    def []=: (arg_0: Integer, arg_1: Bmp::Pixel) -> NilClass
+    def initialize: () -> NilClass
+               | (filename: String) -> NilClass
+               | (width: Integer, height: Integer) -> NilClass
+    def assign: (image: Bmp::Bitmap) -> Bmp::Bitmap
+           | (image: Bmp::Bitmap) -> Bmp::Bitmap
+    def clear: (pixel: Bmp::Pixel) -> NilClass
+    def draw_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Bmp::Pixel) -> NilClass
+    def draw_line: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, color: Bmp::Pixel) -> NilClass
+    def draw_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Bmp::Pixel) -> NilClass
+    def empty?: () -> TrueClass
+    def fill_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Bmp::Pixel) -> NilClass
+    def draw_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
+    def fill_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
+    def fill_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Bmp::Pixel) -> NilClass
+    def flip_h: () -> Bmp::Bitmap
+    def flip_v: () -> Bmp::Bitmap
+    def get: (x: Integer, y: Integer) -> Bmp::Pixel
+        | (x: Integer, y: Integer) -> Bmp::Pixel
     def height: () -> Integer
-    def initialize_copy: (other: Bitmap) -> void
-    def load: (filename: Path) -> void
-    def rotate_90_left: () -> Bitmap
-    def rotate_90_right: () -> Bitmap
-    def save: (filename: Path) -> void
-    def set: (x: Integer, y: Integer, color: Pixel) -> void
+    def initialize_copy: (other: Bmp::Bitmap) -> NilClass
+    def inspect: () -> String
+    def load: (filename: Std::Filesystem::Path) -> NilClass
+    def rotate_90_left: () -> Bmp::Bitmap
+    def rotate_90_right: () -> Bmp::Bitmap
+    def save: (filename: Std::Filesystem::Path) -> NilClass
+    def set: (x: Integer, y: Integer, color: Bmp::Pixel) -> NilClass
+    def size: () -> Integer
+    def to_s: () -> String
     def width: () -> Integer
   end
 end

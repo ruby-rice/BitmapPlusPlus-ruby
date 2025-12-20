@@ -17,6 +17,6 @@ module Bmp
     attr_accessor x_pixels_per_meter: Integer
     attr_accessor y_pixels_per_meter: Integer
 
-    def initialize: () -> void
+    def initialize: () -> NilClass
   end
 end
