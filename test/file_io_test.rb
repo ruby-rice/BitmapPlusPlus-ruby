@@ -26,10 +26,10 @@ class FileIOTest < Minitest::Test
     assert(File.size(path) > 0)
 
     loaded = Bmp::Bitmap.new(path)
-    assert_equal 100, loaded.width
-    assert_equal 50, loaded.height
-    assert_equal Bmp::Red.r, loaded.get(0, 0).r
-    assert_equal Bmp::Blue.b, loaded.get(50, 25).b
+    assert_equal(100, loaded.width)
+    assert_equal(50, loaded.height)
+    assert_equal(Bmp::Red.r, loaded.get(0, 0).r)
+    assert_equal(Bmp::Blue.b, loaded.get(50, 25).b)
   end
 
   def test_load_into_existing_bitmap
@@ -45,8 +45,8 @@ class FileIOTest < Minitest::Test
 		std_path = Std::Filesystem::Path.new(path)
     image.load(std_path)
 
-    assert_equal 100, image.width
-    assert_equal 100, image.height
+    assert_equal(100, image.width)
+    assert_equal(100, image.height)
   end
 
   def test_load_nonexistent_file_raises
@@ -74,7 +74,7 @@ class FileIOTest < Minitest::Test
     # Check BMP magic number
     File.open(path, "rb") do |f|
       magic = f.read(2)
-      assert_equal "BM", magic
+      assert_equal("BM", magic)
     end
   end
 
@@ -100,9 +100,9 @@ class FileIOTest < Minitest::Test
       50.times do |x|
         orig_pixel = original.get(x, y)
         load_pixel = loaded.get(x, y)
-        assert_equal orig_pixel.r, load_pixel.r, "Mismatch at (#{x}, #{y})"
-        assert_equal orig_pixel.g, load_pixel.g, "Mismatch at (#{x}, #{y})"
-        assert_equal orig_pixel.b, load_pixel.b, "Mismatch at (#{x}, #{y})"
+        assert_equal(orig_pixel.r, load_pixel.r, "Mismatch at (#{x}, #{y})")
+        assert_equal(orig_pixel.g, load_pixel.g, "Mismatch at (#{x}, #{y})")
+        assert_equal(orig_pixel.b, load_pixel.b, "Mismatch at (#{x}, #{y})")
       end
     end
   end
