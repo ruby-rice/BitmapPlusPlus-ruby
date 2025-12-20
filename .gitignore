@@ -15,10 +15,7 @@ Gemfile.lock
 *.lib
 
 # Extension build files
-/ext/bitmap_plus_plus/Makefile
-/ext/bitmap_plus_plus/mkmf.log
-/ext/bitmap_plus_plus/*.o
-/ext/bitmap_plus_plus/*.obj
+/ext/build
 
 # Compiled extension in lib (should be built fresh)
 /lib/*.so
