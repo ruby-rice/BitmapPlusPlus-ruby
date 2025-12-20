@@ -2,141 +2,132 @@ name: CI
 
 on:
   push:
-    branches: [main, master]
+    branches: [main]
   pull_request:
-    branches: [main, master]
+    branches: [main]
 
 jobs:
-  test-linux:
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby: ['3.0', '3.1', '3.2', '3.3']
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby ${{ matrix.ruby }}
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Compile extension
-        run: bundle exec rake compile
-
-      - name: Run tests
-        run: bundle exec rake test
-
-  test-macos:
-    runs-on: macos-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby: ['3.1', '3.2', '3.3']
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby ${{ matrix.ruby }}
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Compile extension
-        run: bundle exec rake compile
-
-      - name: Run tests
-        run: bundle exec rake test
-
-  test-windows:
-    runs-on: windows-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby: ['3.1', '3.2', '3.3']
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Ruby ${{ matrix.ruby }}
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: ${{ matrix.ruby }}
-          bundler-cache: true
-
-      - name: Install dependencies
-        run: bundle install
-
-      - name: Compile extension
-        run: bundle exec rake compile
-
-      - name: Run tests
-        run: bundle exec rake test
-
-  cmake-build:
+  test:
+    name: test (${{ matrix.os }}, ruby ${{ matrix.ruby }}, ${{ matrix.toolchain }})
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
       matrix:
         include:
+          # Linux
           - os: ubuntu-latest
+            ruby: '3.1'
             preset: linux-release
+            toolchain: system
+          - os: ubuntu-latest
+            ruby: '3.2'
+            preset: linux-release
+            toolchain: system
+          - os: ubuntu-latest
+            ruby: '3.3'
+            preset: linux-release
+            toolchain: system
+          - os: ubuntu-latest
+            ruby: '3.4'
+            preset: linux-release
+            toolchain: system
+
+          # macOS
           - os: macos-latest
+            ruby: '3.2'
             preset: macos-release
-          - os: windows-latest
-            preset: msvc-release
+            toolchain: system
+          - os: macos-latest
+            ruby: '3.3'
+            preset: macos-release
+            toolchain: system
+          - os: macos-latest
+            ruby: '3.4'
+            preset: macos-release
+            toolchain: system
+
+          # Windows (MinGW)
+          - os: windows-2025
+            ruby: '3.2'
+            preset: mingw-release
+            toolchain: mingw
+          - os: windows-2025
+            ruby: '3.3'
+            preset: mingw-release
+            toolchain: mingw
+          - os: windows-2025
+            ruby: '3.4'
+            preset: mingw-release
+            toolchain: mingw
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Set up Ruby
+      # Ruby
+      - name: Set up Ruby ${{ matrix.ruby }}
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
 
-      - name: Install Rice gem
-        run: gem install rice
-
-      - name: Install Ninja (Ubuntu)
+      # Toolchains / Ninja
+      - name: Install Ninja (Linux)
         if: runner.os == 'Linux'
-        run: sudo apt-get install -y ninja-build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build
 
       - name: Install Ninja (macOS)
         if: runner.os == 'macOS'
         run: brew install ninja
 
-      - name: Install Ninja (Windows)
+      - name: Install Ninja (RubyInstaller MSYS2)
         if: runner.os == 'Windows'
-        run: choco install ninja
+        shell: pwsh
+        run: |
+          ridk exec pacman -Syu --noconfirm
+          ridk exec pacman -S --needed --noconfirm `
+            mingw-w64-ucrt-x86_64-gcc `
+            mingw-w64-ucrt-x86_64-cmake `
+            mingw-w64-ucrt-x86_64-ninja      
 
-      - name: Setup MSVC (Windows)
-        if: runner.os == 'Windows'
-        uses: ilammy/msvc-dev-cmd@v1
-
-      - name: Configure CMake
+      # Configure + Build
+      - name: Configure CMake (Linux/macOS)
+        if: runner.os != 'Windows'
+        working-directory: ext
         run: cmake --preset ${{ matrix.preset }}
 
-      - name: Build
+      - name: Build (Linux/macOS)
+        if: runner.os != 'Windows'
+        working-directory: ext
         run: cmake --build --preset ${{ matrix.preset }}
+
+      - name: Configure CMake (Windows MinGW)
+        if: runner.os == 'Windows' && matrix.toolchain == 'mingw'
+        working-directory: ext
+        shell: pwsh
+        run: ridk exec cmake --preset ${{ matrix.preset }}
+
+      - name: Build (Windows MinGW)
+        if: runner.os == 'Windows' && matrix.toolchain == 'mingw'
+        working-directory: ext
+        shell: pwsh
+        run: ridk exec cmake --build --preset ${{ matrix.preset }}
+
+      # Tests
+      - name: Install dependencies
+        run: bundle install
+
+      - name: Run tests
+        run: bundle exec rake test
 
   lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-
       - name: Check gemspec
-        run: gem build bitmap_plus_plus.gemspec --strict
+        run: gem build bitmap-plus-plus.gemspec --strict
