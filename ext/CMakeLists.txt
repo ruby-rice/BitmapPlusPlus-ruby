@@ -38,7 +38,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE .)
 get_target_property(RUBY_EXT_SUFFIX Ruby::Ruby INTERFACE_RUBY_EXTENSION_SUFFIX)
 set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
   PREFIX ""
-  #SUFFIX "${RUBY_EXT_SUFFIX}"
+  SUFFIX "${RUBY_EXT_SUFFIX}"
   OUTPUT_NAME "bitmap_plus_plus_ruby"
   CXX_VISIBILITY_PRESET hidden
   VISIBILITY_INLINES_HIDDEN ON
