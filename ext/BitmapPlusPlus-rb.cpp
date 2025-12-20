@@ -332,17 +332,18 @@ void initialize()
     .define_iterator<std::vector<bmp::Pixel>::iterator(bmp::Bitmap::*)() noexcept>(
       &bmp::Bitmap::begin, &bmp::Bitmap::end, "each")
 
-    // Iterator accessors (less commonly used from Ruby)
-    .define_method("cbegin", &bmp::Bitmap::cbegin)
-    .define_method("cend", &bmp::Bitmap::cend)
+     // Const iterator
+    .define_iterator<std::vector<bmp::Pixel>::const_iterator(bmp::Bitmap::*)() const noexcept>(
+      &bmp::Bitmap::cbegin, &bmp::Bitmap::cend, "each_const")
 
     // Reverse iterator: bitmap.each_reverse { |pixel| ... }
     .define_iterator<std::vector<bmp::Pixel>::reverse_iterator(bmp::Bitmap::*)() noexcept>(
       &bmp::Bitmap::rbegin, &bmp::Bitmap::rend, "each_reverse")
 
-    .define_method("crbegin", &bmp::Bitmap::crbegin)
-    .define_method("crend", &bmp::Bitmap::crend)
-
+    // Reverse const iterator: bitmap.each_reverse { |pixel| ... }
+    .define_iterator<std::vector<bmp::Pixel>::const_reverse_iterator(bmp::Bitmap::*)() const noexcept>(
+      &bmp::Bitmap::crbegin, &bmp::Bitmap::crend, "each_const_reverse")
+              
     // --------------------------------------------------------------------
     // MODIFIER METHODS
     // --------------------------------------------------------------------
@@ -410,6 +411,10 @@ void Init_bitmap_plus_plus_ruby()
 {
   Rice::detail::cpp_protect([]
   {
+    // Setup Ruby bindings
     initialize();
+
+    // Setup introspection support to generate RBS signatures and documentation
+    Init_Rice_Api();
   });
 }
