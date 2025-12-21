@@ -37,5 +37,3 @@ x_pixels_per_meter: [Integer](https://docs.ruby-lang.org/en/master/Integer.html)
 y_pixels_per_meter: [Integer](https://docs.ruby-lang.org/en/master/Integer.html) (read/write)
 
 
-## Methods
-

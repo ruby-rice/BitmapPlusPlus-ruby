@@ -22,8 +22,8 @@ r: [String](https://docs.ruby-lang.org/en/master/String.html) (read/write)
 
 assign(arg_0: Bmp::Pixel) -> [NilClass](https://docs.ruby-lang.org/en/master/NilClass.html)
 
-inspect() -> [String](https://docs.ruby-lang.org/en/master/String.html)
+inspect -> [String](https://docs.ruby-lang.org/en/master/String.html)
 
-to_s() -> [String](https://docs.ruby-lang.org/en/master/String.html)
+to_s -> [String](https://docs.ruby-lang.org/en/master/String.html)
 
 

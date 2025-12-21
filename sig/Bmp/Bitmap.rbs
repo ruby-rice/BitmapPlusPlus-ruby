@@ -1,27 +1,27 @@
 module Bmp
   class Bitmap
+    def initialize: () -> NilClass
+               | (filename: String) -> NilClass
+               | (width: Integer, height: Integer) -> NilClass
     def !: () -> TrueClass
     def !=: (image: Bmp::Bitmap) -> TrueClass
     def ==: (image: Bmp::Bitmap) -> TrueClass
     def []: (i: Integer) -> Bmp::Pixel
        | (i: Integer) -> Bmp::Pixel
     def []=: (arg_0: Integer, arg_1: Bmp::Pixel) -> NilClass
-    def initialize: () -> NilClass
-               | (filename: String) -> NilClass
-               | (width: Integer, height: Integer) -> NilClass
-    def assign: (image: Bmp::Bitmap) -> Bmp::Bitmap
-           | (image: Bmp::Bitmap) -> Bmp::Bitmap
     def clear: (pixel: Bmp::Pixel) -> NilClass
     def draw_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Bmp::Pixel) -> NilClass
     def draw_line: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, color: Bmp::Pixel) -> NilClass
+    def draw_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
     def draw_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Bmp::Pixel) -> NilClass
     def empty?: () -> TrueClass
     def fill_circle: (center_x: Integer, center_y: Integer, radius: Integer, color: Bmp::Pixel) -> NilClass
-    def draw_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
-    def fill_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
     def fill_triangle: (x1: Integer, y1: Integer, x2: Integer, y2: Integer, x3: Integer, y3: Integer, color: Bmp::Pixel) -> NilClass
     def flip_h: () -> Bmp::Bitmap
     def flip_v: () -> Bmp::Bitmap
+    def fill_rect: (x: Integer, y: Integer, width: Integer, height: Integer, color: Bmp::Pixel) -> NilClass
+    def assign: (image: Bmp::Bitmap) -> Bmp::Bitmap
+           | (image: Bmp::Bitmap) -> Bmp::Bitmap
     def get: (x: Integer, y: Integer) -> Bmp::Pixel
         | (x: Integer, y: Integer) -> Bmp::Pixel
     def height: () -> Integer

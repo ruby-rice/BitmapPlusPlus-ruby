@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install MkDocs and dependencies
-        run: pip install mkdocs-material
+        run: pip install mkdocs-material mkdocs-awesome-pages-plugin
 
       - name: Build docs
         run: mkdocs build
