@@ -1,8 +1,8 @@
 site_name: BitmapPlusPlus Ruby
 site_description: Ruby bindings for BitmapPlusPlus - A C++ library for creating and manipulating 24-bit BMP images
-site_url: https://cfis.github.io/bitmap_plus_plus-ruby
-repo_url: https://github.com/cfis/bitmap_plus_plus-ruby
-repo_name: cfis/bitmap_plus_plus-ruby
+site_url: https://ruby-rice.github.io/BitmapPlusPlus-ruby
+repo_url: https://github.com/ruby-rice/BitmapPlusPlus-ruby
+repo_name: ruby-rice/BitmapPlusPlus-ruby
 
 theme:
   name: material

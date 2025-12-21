@@ -46,16 +46,16 @@ image.save("output.bmp")
 gem install bitmap_plus_plus
 ```
 
-For detailed installation options including building from source and CMake builds, see the [Installation Guide](https://cfis.github.io/bitmap_plus_plus-ruby/installation/).
+For detailed installation options including building from source and CMake builds, see the [Installation Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/installation/).
 
 ## Documentation
 
-Full documentation is available at **[https://cfis.github.io/bitmap_plus_plus-ruby/](https://cfis.github.io/bitmap_plus_plus-ruby/)**
+Full documentation is available at **[https://ruby-rice.github.io/BitmapPlusPlus-ruby/](https://ruby-rice.github.io/BitmapPlusPlus-ruby/)**
 
-- [Usage Guide](https://cfis.github.io/bitmap_plus_plus-ruby/usage/) - Complete usage documentation
-- [Examples](https://cfis.github.io/bitmap_plus_plus-ruby/examples/) - Runnable example scripts
-- [API Reference](https://cfis.github.io/bitmap_plus_plus-ruby/api/Bmp/Bitmap/) - Detailed API documentation
-- [About Rice](https://cfis.github.io/bitmap_plus_plus-ruby/about-rice/) - Rice features demonstrated in this project
+- [Usage Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/usage/) - Complete usage documentation
+- [Examples](https://ruby-rice.github.io/BitmapPlusPlus-ruby/examples/) - Runnable example scripts
+- [API Reference](https://ruby-rice.github.io/BitmapPlusPlus-ruby/api/Bmp/Bitmap/) - Detailed API documentation
+- [About Rice](https://ruby-rice.github.io/BitmapPlusPlus-ruby/about-rice/) - Rice features demonstrated in this project
 
 ## License
 
