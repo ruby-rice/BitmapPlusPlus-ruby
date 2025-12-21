@@ -98,14 +98,14 @@ target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
 # -----------------------------------------------------------------------------
 # Link to Rice
 # -----------------------------------------------------------------------------
-# The rice::rice target provides:
+# The Rice::Rice target provides:
 #   - Include paths to Rice headers
 #   - Required compiler flags for Rice
 #
 # Rice is header-only, so this doesn't add any link-time dependencies.
 
 target_link_libraries(${CMAKE_PROJECT_NAME} PRIVATE
-  rice::rice
+  Rice::Rice
 )
 
 # -----------------------------------------------------------------------------
