@@ -9,7 +9,7 @@ lib_path = File.expand_path(File.join(__dir__, "..", "lib"))
 $LOAD_PATH.unshift(lib_path)
 
 # Now load code
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 
 # Load minitest
 require "minitest/autorun"

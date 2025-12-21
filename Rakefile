@@ -5,7 +5,7 @@ require "rake/testtask"
 require "rubygems/package_task"
 
 GEM_NAME = 'bitmap-plus-plus'
-SO_NAME = 'bitmap_plus_plus'
+SO_NAME = 'bitmap-plus-plus'
 
 gemspec = Gem::Specification.load("#{GEM_NAME}.gemspec")
 

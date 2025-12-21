@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "lib/bitmap_plus_plus/version"
+require_relative "lib/bitmap-plus-plus/version"
 
 Gem::Specification.new do |spec|
   spec.name = "bitmap-plus-plus"
@@ -14,15 +14,15 @@ Gem::Specification.new do |spec|
     (lines, rectangles, triangles, circles), pixel manipulation, image transformations
     (flip, rotate), and file I/O. Uses Rice for C++ to Ruby bindings.
   DESC
-  spec.homepage = "https://github.com/cfis/bitmap_plus_plus-ruby"
+  spec.homepage = "https://github.com/ruby-rice/BitmapPlusPlus-ruby"
   spec.license = "BSD-2-Clause"
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.metadata = {
-    "bug_tracker_uri" => "https://github.com/cfis/bitmap_plus_plus-ruby/issues",
-    "changelog_uri" => "https://github.com/cfis/bitmap_plus_plus-ruby/blob/main/CHANGELOG.md",
-    "documentation_uri" => "https://github.com/cfis/bitmap_plus_plus-ruby#readme",
-    "source_code_uri" => "https://github.com/cfis/bitmap_plus_plus-ruby"
+    "bug_tracker_uri" => "https://github.com/ruby-rice/BitmapPlusPlus-ruby/issues",
+    "changelog_uri" => "https://github.com/ruby-rice/BitmapPlusPlus-ruby/blob/main/CHANGELOG.md",
+    "documentation_uri" => "https://github.com/ruby-rice/BitmapPlusPlus-ruby#readme",
+    "source_code_uri" => "https://github.com/ruby-rice/BitmapPlusPlus-ruby"
   }
   spec.require_paths = ["lib"]
   spec.extensions = ["ext/CMakeLists.txt"]

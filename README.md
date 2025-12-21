@@ -6,7 +6,7 @@ Ruby bindings for [BitmapPlusPlus](https://github.com/baderouaich/BitmapPlusPlus
 
 This gem serves as both a useful library and a **practical example of using [Rice](https://github.com/ruby-rice/rice) to create Ruby bindings for C++ libraries**.
 
-The binding code in `ext/bitmap_plus_plus/bitmap_plus_plus.cpp` is well-commented and can serve as a reference for your own Rice projects.
+The binding code in `ext/BitmapPlusPlus-rb.cpp` is well-commented and can serve as a reference for your own Rice projects.
 
 ## Features
 
@@ -22,7 +22,7 @@ The binding code in `ext/bitmap_plus_plus/bitmap_plus_plus.cpp` is well-commente
 ## Quick Start
 
 ```ruby
-require 'bitmap_plus_plus'
+require 'bitmap-plus-plus'
 
 # Create a new 640x480 bitmap
 image = Bmp::Bitmap.new(640, 480)
@@ -43,7 +43,7 @@ image.save("output.bmp")
 ## Installation
 
 ```bash
-gem install bitmap_plus_plus
+gem install bitmap-plus-plus
 ```
 
 For detailed installation options including building from source and CMake builds, see the [Installation Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/installation/).

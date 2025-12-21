@@ -3,7 +3,7 @@
 ## Quick Start
 
 ```ruby
-require 'bitmap_plus_plus'
+require 'bitmap-plus-plus'
 
 # Create a new 640x480 bitmap
 image = Bmp::Bitmap.new(640, 480)

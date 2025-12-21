@@ -11,7 +11,7 @@
 #
 # All transformations return a new Bitmap (they are immutable operations).
 
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 
 def create_test_image
   # Create an asymmetric image to clearly show transformations

@@ -18,7 +18,7 @@ Output files are saved to the `examples/output/` directory.
 Demonstrates basic shape drawing including lines, rectangles, triangles, and circles.
 
 ```ruby
-require_relative '../lib/bitmap_plus_plus'
+require_relative '../lib/bitmap-plus-plus'
 
 image = Bmp::Bitmap.new(512, 512)
 image.clear(Bmp::White)
@@ -40,7 +40,7 @@ image.save("output/primitives.bmp")
 Generates a Mandelbrot set fractal image.
 
 ```ruby
-require_relative '../lib/bitmap_plus_plus'
+require_relative '../lib/bitmap-plus-plus'
 
 WIDTH = 800
 HEIGHT = 600
@@ -80,7 +80,7 @@ Generates a Julia set fractal image with configurable parameters.
 Demonstrates iterator usage by filling an image with random pixel colors.
 
 ```ruby
-require_relative '../lib/bitmap_plus_plus'
+require_relative '../lib/bitmap-plus-plus'
 
 image = Bmp::Bitmap.new(256, 256)
 
@@ -98,7 +98,7 @@ image.save("output/random.bmp")
 Shows image transformation operations: flip and rotate.
 
 ```ruby
-require_relative '../lib/bitmap_plus_plus'
+require_relative '../lib/bitmap-plus-plus'
 
 # Create a test image with an asymmetric pattern
 image = Bmp::Bitmap.new(200, 100)

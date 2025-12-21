@@ -9,14 +9,14 @@
 ## Install from RubyGems
 
 ```bash
-gem install bitmap_plus_plus
+gem install bitmap-plus-plus
 ```
 
 ## Install from Source
 
 ```bash
 git clone https://github.com/cfis/bitmap_plus_plus-ruby.git
-cd bitmap_plus_plus-ruby
+cd bitmap-plus-plus-ruby
 bundle install
 rake compile
 rake install

@@ -8,7 +8,7 @@
 # - Creating pixels with random RGB values
 # - The assign method for copying pixel values
 
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 
 def random_pixel
   Bmp::Pixel.new(rand(256), rand(256), rand(256))

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "bitmap_plus_plus/version"
+require_relative "bitmap-plus-plus/version"
 
 begin
   # Try to load the precompiled extension

@@ -9,7 +9,7 @@
 # - Triangles (filled and outline)
 # - Circles (filled and outline)
 
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 
 def draw_primitives
   # Create a custom background color from hex value

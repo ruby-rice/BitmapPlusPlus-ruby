@@ -9,7 +9,7 @@
 # - Setting individual pixels with calculated colors
 # - Using color maps for smooth coloring
 
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 require_relative "colormaps"
 
 MAX_ITERATIONS = 500

@@ -7,7 +7,7 @@
 # The Julia set is similar to the Mandelbrot set but uses a fixed complex
 # constant instead of varying it per pixel.
 
-require "bitmap_plus_plus"
+require "bitmap-plus-plus"
 require_relative "colormaps"
 
 MAX_ITERATIONS = 300

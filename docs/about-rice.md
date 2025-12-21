@@ -2,7 +2,7 @@
 
 This gem serves as a practical example of using [Rice](https://github.com/ruby-rice/rice) to create Ruby bindings for C++ libraries.
 
-Rice is a C++ header-only library that makes it easy to create Ruby extensions. The binding code in `ext/bitmap_plus_plus/bitmap_plus_plus.cpp` is well-commented and can serve as a reference for your own Rice projects.
+Rice is a C++ header-only library that makes it easy to create Ruby extensions. The binding code in `ext/BitmapPlusPlus-rb.cpp` is well-commented and can serve as a reference for your own Rice projects.
 
 ## Rice Features Demonstrated
 
