@@ -1,0 +1,78 @@
+site_name: BitmapPlusPlus Ruby
+site_description: Ruby bindings for BitmapPlusPlus - A C++ library for creating and manipulating 24-bit BMP images
+site_url: https://cfis.github.io/bitmap_plus_plus-ruby
+repo_url: https://github.com/cfis/bitmap_plus_plus-ruby
+repo_name: cfis/bitmap_plus_plus-ruby
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: purple
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - content.code.annotate
+
+validation:
+  nav:
+    omitted_files: info
+    not_found: warn
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage Guide: usage.md
+  - Examples: examples.md
+  - API Reference:
+    - Bmp:
+      - api/Bmp/index.md
+      - Bitmap: api/Bmp/Bitmap.md
+      - BitmapHeader: api/Bmp/BitmapHeader.md
+      - Exception: api/Bmp/Exception.md
+      - Pixel: api/Bmp/Pixel.md
+    - Rice:
+      - api/Rice/index.md
+      - Arg: api/Rice/Arg.md
+      - "Buffer<char>": "api/Rice/Buffer≺char≻.md"
+      - "Buffer<ParameterAbstract*>": "api/Rice/Buffer≺Rice꞉꞉detail꞉꞉ParameterAbstract∗≻.md"
+      - ModuleRegistry: api/Rice/ModuleRegistry.md
+      - Native: api/Rice/Native.md
+      - NativeKind: api/Rice/NativeKind.md
+      - NativeRegistry: api/Rice/NativeRegistry.md
+      - Parameter: api/Rice/Parameter.md
+      - "Pointer<char>": "api/Rice/Pointer≺char≻.md"
+      - "Pointer<ParameterAbstract*>": "api/Rice/Pointer≺Rice꞉꞉detail꞉꞉ParameterAbstract∗≻.md"
+      - Registries: api/Rice/Registries.md
+      - TypeRegistry: api/Rice/TypeRegistry.md
+    - Std:
+      - api/Std/index.md
+      - Exception: api/Std/Exception.md
+      - Filesystem:
+        - api/Std/Filesystem/index.md
+        - Path: api/Std/Filesystem/Path.md
+      - RuntimeError: api/Std/RuntimeError.md
+      - "Vector<ParameterAbstract const*>": api/Std/Vector≺Rice꞉꞉detail꞉꞉ParameterAbstract const∗≻.md
+  - About Rice: about-rice.md
