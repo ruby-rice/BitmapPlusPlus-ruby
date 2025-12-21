@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Source/BitmapPlusPlus-ruby/ext/build/mingw-release",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe -DBitmapPlusPlus_EXPORTS -IC:/msys64/usr/local/ruby-3.4.3-mswin/include/ruby-3.4.0 -IC:/msys64/usr/local/ruby-3.4.3-mswin/include/ruby-3.4.0/x64-mswin64_140 -IC:/Source/BitmapPlusPlus-ruby/ext/../../rice -IC:/Source/BitmapPlusPlus-ruby/ext/. -Wall -ftemplate-backtrace-limit=0 -Wa,-mbig-obj -O3 -DNDEBUG -O3 -DNDEBUG -std=gnu++17 -fvisibility=hidden -fno-keep-inline-dllexport -o CMakeFiles\\BitmapPlusPlus.dir\\BitmapPlusPlus-rb.cpp.obj -c C:\\Source\\BitmapPlusPlus-ruby\\ext\\BitmapPlusPlus-rb.cpp",
-  "file": "C:/Source/BitmapPlusPlus-ruby/ext/BitmapPlusPlus-rb.cpp",
-  "output": "C:/Source/BitmapPlusPlus-ruby/ext/build/mingw-release/CMakeFiles/BitmapPlusPlus.dir/BitmapPlusPlus-rb.cpp.obj"
-}
-]

@@ -21,7 +21,7 @@ Rice is a C++ header-only library that makes it easy to create Ruby extensions. 
 
 ## License
 
-This gem is available under the [BSD-2-Clause License](https://github.com/cfis/bitmap_plus_plus-ruby/blob/main/LICENSE).
+This gem is available under the [BSD-2-Clause License](https://github.com/ruby-rice/BitmapPlusPlus-ruby/blob/main/LICENSE).
 
 ## Acknowledgments
 
