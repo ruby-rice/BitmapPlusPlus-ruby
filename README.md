@@ -43,7 +43,7 @@ image.save("output.bmp")
 ## Installation
 
 ```bash
-gem install bitmap-plus-plus
+gem install bitmap-plus-plus --preset <linux-release|macos-release|windows-release>
 ```
 
 For detailed installation options including building from source and CMake builds, see the [Installation Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/installation/).
@@ -55,7 +55,7 @@ Full documentation is available at **[https://ruby-rice.github.io/BitmapPlusPlus
 - [Usage Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/usage/) - Complete usage documentation
 - [Examples](https://ruby-rice.github.io/BitmapPlusPlus-ruby/examples/) - Runnable example scripts
 - [API Reference](https://ruby-rice.github.io/BitmapPlusPlus-ruby/api/Bmp/Bitmap/) - Detailed API documentation
-- [About Rice](https://ruby-rice.github.io/BitmapPlusPlus-ruby/about-rice/) - Rice features demonstrated in this project
+- [Rice Guide](https://ruby-rice.github.io/BitmapPlusPlus-ruby/rice-guide/) - Rice features demonstrated in this project
 
 ## License
 

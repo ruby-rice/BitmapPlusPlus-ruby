@@ -9,7 +9,7 @@
 ## Install from RubyGems
 
 ```bash
-gem install bitmap-plus-plus
+gem install bitmap-plus-plus -- --preset [linux-release|macos-release|mingw-release|msvc-release]
 ```
 
 ## Install from Source
@@ -24,7 +24,7 @@ rake install
 
 ## Build with CMake
 
-For development, you can also build using CMake with presets:
+For development, you will need a C++ compiler installed as well as CMake. Then build BitmapPlusPlus using the appropriate CMake preset for your operating system:
 
 ### Linux
 
@@ -40,6 +40,13 @@ cmake --preset macos-release
 cmake --build --preset macos-release
 ```
 
+### Windows (MinGW)
+
+```bash
+cmake --preset mingw-release
+cmake --build --preset mingw-release
+```
+
 ### Windows (MSVC)
 
 ```bash
@@ -47,9 +54,3 @@ cmake --preset msvc-release
 cmake --build --preset msvc-release
 ```
 
-### Windows (MinGW)
-
-```bash
-cmake --preset mingw-release
-cmake --build --preset mingw-release
-```

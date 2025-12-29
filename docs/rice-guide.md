@@ -1,14 +1,12 @@
 # Rice Guide
 
-This gem serves as a practical example of using [Rice](https://github.com/ruby-rice/rice) to create Ruby bindings for C++ libraries.
+This gem is an example of using [Rice](https://github.com/ruby-rice/rice) to create Ruby bindings for C++ libraries.
 
 Rice is a C++ header-only library that makes it easy to create Ruby extensions. The binding code in `ext/BitmapPlusPlus-rb.cpp` is well-commented and can serve as a reference for your own Rice projects.
 
-## Rice Features Demonstrated
+It not only shows how to wrap C++ namespaces and classes, but also how to generate RBS files as well as documentation. 
 
-This project demonstrates several Rice features:
-
-### Module and Class Definitions
+## Module and Class Definitions
 
 Wrapping C++ namespaces and classes. See [Rice Classes](https://ruby-rice.github.io/4.x/classes/).
 
@@ -20,7 +18,7 @@ Data_Type<bmp::Pixel> rb_cPixel =
     // ...
 ```
 
-### Constructor Overloading
+## Constructor Overloading
 
 Multiple constructors with different signatures. See [Rice Constructors](https://ruby-rice.github.io/4.x/methods/constructors/).
 
@@ -30,7 +28,7 @@ Multiple constructors with different signatures. See [Rice Constructors](https:/
 .define_constructor(Constructor<bmp::Pixel, uint8_t, uint8_t, uint8_t>())
 ```
 
-### Method Binding
+## Method Binding
 
 Direct mapping of C++ methods to Ruby. See [Rice Methods](https://ruby-rice.github.io/4.x/methods/).
 
@@ -39,7 +37,7 @@ Direct mapping of C++ methods to Ruby. See [Rice Methods](https://ruby-rice.gith
 .define_method("height", &bmp::Bitmap::height)
 ```
 
-### Method Overload Resolution
+## Method Overload Resolution
 
 Template-based disambiguation for overloaded methods. See [Rice Overloaded Methods](https://ruby-rice.github.io/4.x/methods/overloaded/).
 
@@ -48,7 +46,7 @@ Template-based disambiguation for overloaded methods. See [Rice Overloaded Metho
     "set", &bmp::Bitmap::set)
 ```
 
-### Operator Overloading
+## Operator Overloading
 
 Exposing C++ operators (`==`, `!=`, `[]`, etc.). See [Rice Operators](https://ruby-rice.github.io/4.x/methods/operators/).
 
@@ -58,7 +56,7 @@ Exposing C++ operators (`==`, `!=`, `[]`, etc.). See [Rice Operators](https://ru
 .define_method("[]", &bmp::Bitmap::operator[])
 ```
 
-### Lambda-based Methods
+## Lambda-based Methods
 
 For operations without direct C++ equivalents. See [Rice Lambdas](https://ruby-rice.github.io/4.x/methods/lambdas/).
 
@@ -68,7 +66,7 @@ For operations without direct C++ equivalents. See [Rice Lambdas](https://ruby-r
 })
 ```
 
-### Attribute Access
+## Attribute Access
 
 Binding C++ struct members as Ruby attributes. See [Rice Attributes](https://ruby-rice.github.io/4.x/methods/attributes/).
 
@@ -78,7 +76,7 @@ Binding C++ struct members as Ruby attributes. See [Rice Attributes](https://rub
 .define_attr("b", &bmp::Pixel::b)
 ```
 
-### STL Integration
+## STL Integration
 
 Using `rice/stl.hpp` for automatic type conversions. See [Rice STL](https://ruby-rice.github.io/4.x/stl/).
 
@@ -88,7 +86,7 @@ Using `rice/stl.hpp` for automatic type conversions. See [Rice STL](https://ruby
 // std::string, std::vector, std::filesystem::path automatically convert
 ```
 
-### Iterator Support
+## Iterator Support
 
 Making C++ iterators work with Ruby's `each`. See [Rice Iterators](https://ruby-rice.github.io/4.x/stl/iterators/).
 
@@ -97,7 +95,7 @@ Making C++ iterators work with Ruby's `each`. See [Rice Iterators](https://ruby-
     &bmp::Bitmap::begin, &bmp::Bitmap::end, "each")
 ```
 
-### Exception Handling
+## Exception Handling
 
 C++ exceptions converted to Ruby exceptions. See [Rice Exceptions](https://ruby-rice.github.io/4.x/exceptions/).
 
@@ -107,7 +105,7 @@ Rice::detail::cpp_protect([]{
 });
 ```
 
-### Default Arguments
+## Default Arguments
 
 Supporting optional parameters with defaults. See [Rice Default Arguments](https://ruby-rice.github.io/4.x/methods/default_arguments/).
 
@@ -116,7 +114,7 @@ Supporting optional parameters with defaults. See [Rice Default Arguments](https
     Arg("pixel") = static_cast<const bmp::Pixel>(bmp::Black))
 ```
 
-### Module Constants
+## Module Constants
 
 Defining constants in Ruby modules. See [Rice Constants](https://ruby-rice.github.io/4.x/classes/constants/).
 

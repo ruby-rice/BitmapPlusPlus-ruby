@@ -1,5 +1,5 @@
 # Paths are relative to this file
-extension: ../lib/3.4/bitmap_plus_plus_ruby.so
+extension: ../lib/bitmap_plus_plus_ruby.so
 output: ./api
 
 # Note: Ruby core types are automatically linked to docs.ruby-lang.org

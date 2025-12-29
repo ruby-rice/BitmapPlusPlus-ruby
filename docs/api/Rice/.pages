@@ -9,5 +9,8 @@ nav:
   - Parameter.md
   - Pointer≺Rice꞉꞉detail꞉꞉ParameterAbstract∗≻.md
   - Pointer≺char≻.md
+  - Reference≺char≻.md
+  - Reference≺int≻.md
+  - Reference≺unsigned Int64≻.md
   - Registries.md
   - TypeRegistry.md

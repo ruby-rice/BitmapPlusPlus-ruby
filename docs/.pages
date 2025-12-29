@@ -3,5 +3,5 @@ nav:
   - Installation: installation.md
   - Usage Guide: usage.md
   - Examples: examples.md
+  - Rice Guide: rice-guide.md
   - API Reference: api
-  - About Rice: about-rice.md
