@@ -40,9 +40,6 @@ project(BitmapPlusPlus LANGUAGES CXX)
 #           This is correct for Ruby extensions loaded via require/dlopen.
 # - SHARED: Creates a shared library that can be linked against.
 #           On macOS, this creates a .dylib which Ruby cannot load.
-#
-# Using SHARED on macOS will result in: "LoadError: cannot load such file"
-# because Ruby expects a .bundle file, not a .dylib.
 
 add_library(${CMAKE_PROJECT_NAME} MODULE)
 
@@ -62,7 +59,7 @@ include(FetchContent)
 FetchContent_Declare(
   rice
   GIT_REPOSITORY https://github.com/ruby-rice/rice.git
-  GIT_TAG dev
+  GIT_TAG 4.8.0
 )
 FetchContent_MakeAvailable(rice)
 
@@ -154,7 +151,6 @@ set_target_properties(${CMAKE_PROJECT_NAME} PROPERTIES
   CXX_VISIBILITY_PRESET hidden
   VISIBILITY_INLINES_HIDDEN ON
   WINDOWS_EXPORT_ALL_SYMBOLS OFF
-  RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../lib/${Ruby_VERSION_MAJOR}.${Ruby_VERSION_MINOR}"
   LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/../lib"
 )
 
